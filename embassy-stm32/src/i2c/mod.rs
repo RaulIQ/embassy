@@ -6,12 +6,14 @@
 mod _version;
 
 mod config;
+mod smbus;
 
 use core::future::Future;
 use core::iter;
 use core::marker::PhantomData;
 
 pub use config::*;
+pub use smbus::{Config as SmbusConfig, Role as SmbusRole, Smbus};
 use embassy_hal_internal::Peri;
 use embassy_sync::waitqueue::AtomicWaker;
 #[cfg(feature = "time")]
